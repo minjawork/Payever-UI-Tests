@@ -33,5 +33,8 @@
     "mochawesome-report-generator": "^4.0.1",
     "wdio-chromedriver-service": "^5.0.2",
     "wdio-mochawesome-reporter": "^3.2.0"
+  },
+  "dependencies": {
+    "asyncawait": "^3.0.0"
   }
 }

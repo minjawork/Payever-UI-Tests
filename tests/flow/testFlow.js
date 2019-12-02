@@ -16,9 +16,10 @@ describe('Tests', function () {
   it('Theme Apps is open', function () {
     PageObject.appsButton.click();
     PageObject.shopIcon.click();
-    browser.waitUntil(() => {
-      return PageObject.themesButton.isExisting();
-    });
+    browser.pause(3000);
+    // browser.waitUntil(() => {
+    //   return PageObject.themesButton.isExisting();
+    // });
     expect(browser.getUrl()).to.equal(Credentials.shopUrl);
     PageObject.themesButton.click();
   });
@@ -26,7 +27,12 @@ describe('Tests', function () {
   it('New Theme is created', function () {
     PageObject.addTheme.click();
     PageObject.aButton.click();
-    // Missing step 13
+    browser.pause(500);
+
+    const svg = $('//pe-editor-canvas[@class="pe-editor-canvas"]').shadow$$('//div[contains(@class,"ng-star-inserted")]/pe-editor-element-anchors/svg');
+    svg.waitForExist();
+    console.log('!!!!!!!!!!!' + svg);
+    svg.click();
   });
 
   it('Shop app can be closed', function () {

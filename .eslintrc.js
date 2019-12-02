@@ -11,7 +11,7 @@ module.exports = {
       "node": true
     },
     "parserOptions": {
-      "ecmaVersion": "2015"
+      "ecmaVersion": "2017"
     },
     "rules": {
       "mocha/no-identical-title": 2,
